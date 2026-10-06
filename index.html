@@ -3,35 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Главная страница учебного интернет-магазина.">
-  <title>Учебный интернет-магазин</title>
+  <meta name="description" content="ШколаМаркет — школьные товары, канцелярия и учебная литература с доставкой.">
+  <title>ШколаМаркет — школьные товары и канцелярия</title>
   <link rel="stylesheet" href="css/style.css">
   <script src="js/main.js" defer></script>
 </head>
 <body>
   <header class="site-header">
     <div class="site-header__inner">
-      <a class="site-header__logo" href="index.html">ShopProject</a>
+      <a class="site-header__logo" href="index.html">ШколаМаркет</a>
       <nav class="site-nav" aria-label="Основная навигация">
         <ul class="site-nav__list">
-          <li class="site-nav__item">
-            <a class="site-nav__link site-nav__link--active" href="index.html">Главная</a>
-          </li>
-          <li class="site-nav__item">
-            <a class="site-nav__link" href="catalog.html">Каталог</a>
-          </li>
-          <li class="site-nav__item">
-            <a class="site-nav__link" href="contacts.html">Контакты</a>
-          </li>
-          <li class="site-nav__item">
-            <a class="site-nav__link" href="index.html#advantages">Преимущества</a>
-          </li>
-          <li class="site-nav__item">
-            <a class="site-nav__link" href="index.html#popular">Популярные товары</a>
-          </li>
-          <li class="site-nav__item">
-            <a class="site-nav__link" href="index.html#contacts">Обратная связь</a>
-          </li>
+          <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="index.html">Главная</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="catalog.html">Каталог</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="order.html">Заявка</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="index.html#advantages">Преимущества</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="index.html#popular">Популярные товары</a></li>
         </ul>
       </nav>
     </div>
@@ -39,22 +27,34 @@
 
   <main>
     <section class="hero">
-      <h1 class="hero__title">Учебный интернет-магазин</h1>
+      <h1 class="hero__title">Всё для школы в одном месте</h1>
       <p class="hero__text">
-        Это стартовая страница учебного frontend-проекта.
-        В дальнейшем на её основе будет разработан многостраничный сайт
-        интернет-магазина или каталога услуг.
+        Рюкзаки, канцелярия, тетради и учебная литература для учеников
+        с 1 по 11 класс. Собираем комплекты к началу учебного года
+        и доставляем за один-два дня.
       </p>
-      <a class="button button--primary hero__button" href="#popular">Перейти к товарам</a>
+      <a class="button button--primary hero__button" href="catalog.html">Перейти в каталог</a>
     </section>
 
     <section class="section" id="advantages">
-      <h2 class="section__title">Преимущества проекта</h2>
+      <h2 class="section__title">Почему выбирают нас</h2>
       <ul class="advantages-list">
-        <li class="advantages-list__item">понятная HTML-структура;</li>
-        <li class="advantages-list__item">семантические блоки страницы;</li>
-        <li class="advantages-list__item">подключение внешнего CSS-файла;</li>
-        <li class="advantages-list__item">подготовка к разработке многостраничного сайта.</li>
+        <li class="advantages-list__item">
+          <strong>Готовые комплекты по классам.</strong> Не нужно сверяться
+          со списком от учителя — мы уже собрали всё необходимое.
+        </li>
+        <li class="advantages-list__item">
+          <strong>Проверенные производители.</strong> Работаем только
+          с сертифицированной продукцией, безопасной для детей.
+        </li>
+        <li class="advantages-list__item">
+          <strong>Доставка за 1–2 дня.</strong> По городу курьером
+          или самовывоз из пункта выдачи в день заказа.
+        </li>
+        <li class="advantages-list__item">
+          <strong>Обмен в течение 14 дней.</strong> Если размер рюкзака
+          не подошёл — поменяем без вопросов.
+        </li>
       </ul>
     </section>
 
@@ -63,28 +63,46 @@
       <div class="products-grid">
 
         <article class="product-card">
-          <h3 class="product-card__title">Товар 1</h3>
-          <p class="product-card__description">Краткое описание учебного товара.</p>
-          <p class="product-card__price">Цена: 1000 руб.</p>
-          <button class="button button--primary product-card__button" type="button" data-product="Товар 1">
+          <span class="product-card__badge product-card__badge--hit">Хит</span>
+          <img class="product-card__image" src="images/backpack.svg" width="400" height="300"
+               alt="Синий школьный рюкзак с ортопедической спинкой">
+          <h3 class="product-card__title">Рюкзак школьный ортопедический</h3>
+          <p class="product-card__description">
+            Жёсткая спинка, светоотражающие вставки и два отделения под
+            учебники формата А4. Вес всего 780 грамм.
+          </p>
+          <p class="product-card__price">3 490 ₽</p>
+          <button class="button button--primary product-card__button" type="button" data-product="Рюкзак школьный ортопедический">
             Заказать
           </button>
         </article>
 
         <article class="product-card">
-          <h3 class="product-card__title">Товар 2</h3>
-          <p class="product-card__description">Краткое описание учебного товара.</p>
-          <p class="product-card__price">Цена: 1500 руб.</p>
-          <button class="button button--primary product-card__button" type="button" data-product="Товар 2">
+          <span class="product-card__badge product-card__badge--new">Новинка</span>
+          <img class="product-card__image" src="images/pencil-case.svg" width="400" height="300"
+               alt="Синий пенал-органайзер с ручками и карандашами">
+          <h3 class="product-card__title">Пенал-органайзер с наполнением</h3>
+          <p class="product-card__description">
+            Две молнии, резинки-держатели и 24 предмета внутри: ручки,
+            карандаши, линейка, ластик и точилка.
+          </p>
+          <p class="product-card__price">1 250 ₽</p>
+          <button class="button button--primary product-card__button" type="button" data-product="Пенал-органайзер с наполнением">
             Заказать
           </button>
         </article>
 
         <article class="product-card">
-          <h3 class="product-card__title">Товар 3</h3>
-          <p class="product-card__description">Краткое описание учебного товара.</p>
-          <p class="product-card__price">Цена: 2000 руб.</p>
-          <button class="button button--primary product-card__button" type="button" data-product="Товар 3">
+          <span class="product-card__badge product-card__badge--sale">Скидка</span>
+          <img class="product-card__image" src="images/pens.svg" width="400" height="300"
+               alt="Набор гелевых ручек разных цветов">
+          <h3 class="product-card__title">Набор гелевых ручек, 12 цветов</h3>
+          <p class="product-card__description">
+            Пишут мягко и не мажут. Прозрачный корпус, чтобы видеть,
+            сколько чернил осталось.
+          </p>
+          <p class="product-card__price">290 ₽</p>
+          <button class="button button--primary product-card__button" type="button" data-product="Набор гелевых ручек, 12 цветов">
             Заказать
           </button>
         </article>
@@ -93,17 +111,17 @@
     </section>
 
     <aside class="aside-info">
-      <h2 class="aside-info__title">Информация для студентов</h2>
+      <h2 class="aside-info__title">Комплекты к 1 сентября</h2>
       <p class="aside-info__text">
-        На следующих практических занятиях этот проект будет расширяться:
-        появятся формы, модальное окно, дополнительные страницы, Flex/Grid,
-        БЭМ-структура и адаптивная версия сайта.
+        Соберём готовый набор по списку вашего класса: тетради, канцелярия,
+        обложки и дневник. Напишите класс в комментарии к заявке — подберём
+        комплект и посчитаем стоимость.
       </p>
     </aside>
   </main>
 
   <footer class="site-footer" id="contacts">
-    <p>&copy; 2026 Учебный проект. Все права защищены.</p>
+    <p>&copy; 2026 ШколаМаркет. Учебный проект.</p>
     <p>Дисциплина: Фронтенд и бэкенд разработка</p>
   </footer>
 
@@ -114,54 +132,26 @@
 
       <div class="order-form__field">
         <label class="order-form__label" for="order-name">Имя</label>
-        <input
-          class="order-form__input"
-          id="order-name"
-          name="name"
-          type="text"
-          placeholder="Введите ваше имя"
-          minlength="2"
-          autocomplete="given-name"
-          required
-        >
+        <input class="order-form__input" id="order-name" name="name" type="text"
+               placeholder="Введите ваше имя" minlength="2" autocomplete="given-name" required>
       </div>
 
       <div class="order-form__field">
         <label class="order-form__label" for="order-email">E-mail</label>
-        <input
-          class="order-form__input"
-          id="order-email"
-          name="email"
-          type="email"
-          placeholder="example@mail.ru"
-          autocomplete="email"
-          required
-        >
+        <input class="order-form__input" id="order-email" name="email" type="email"
+               placeholder="example@mail.ru" autocomplete="email" required>
       </div>
 
       <div class="order-form__field">
         <label class="order-form__label" for="order-phone">Телефон</label>
-        <input
-          class="order-form__input"
-          id="order-phone"
-          name="phone"
-          type="tel"
-          inputmode="tel"
-          placeholder="+7 (900) 000-00-00"
-          pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$"
-          required
-        >
+        <input class="order-form__input" id="order-phone" name="phone" type="tel" inputmode="tel"
+               placeholder="+7 (900) 000-00-00" pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$" required>
         <small class="order-form__hint">Формат: +7 (900) 000-00-00</small>
       </div>
 
       <div class="order-form__field">
         <label class="order-form__label" for="order-date">Дата связи</label>
-        <input
-          class="order-form__input"
-          id="order-date"
-          name="date"
-          type="date"
-        >
+        <input class="order-form__input" id="order-date" name="date" type="date">
       </div>
 
       <div class="order-form__field">
@@ -169,6 +159,7 @@
         <select class="order-form__select" id="order-topic" name="topic" required>
           <option value="">Выберите тему</option>
           <option value="product">Заказ товара</option>
+          <option value="set">Комплект к 1 сентября</option>
           <option value="consultation">Консультация</option>
           <option value="delivery">Доставка</option>
         </select>
@@ -176,24 +167,13 @@
 
       <div class="order-form__field">
         <label class="order-form__label" for="order-comment">Комментарий</label>
-        <textarea
-          class="order-form__textarea"
-          id="order-comment"
-          name="comment"
-          rows="4"
-          placeholder="Укажите дополнительную информацию"
-        ></textarea>
+        <textarea class="order-form__textarea" id="order-comment" name="comment" rows="4"
+                  placeholder="Класс, список от учителя, пожелания по заказу"></textarea>
       </div>
 
       <div class="order-form__field order-form__field--checkbox">
         <label class="order-form__label">
-          <input
-            class="order-form__checkbox"
-            id="order-agreement"
-            name="agreement"
-            type="checkbox"
-            required
-          >
+          <input class="order-form__checkbox" id="order-agreement" name="agreement" type="checkbox" required>
           Я согласен на обработку данных
         </label>
       </div>
@@ -206,7 +186,9 @@
   </dialog>
 
   <p class="success-message" id="success-message" hidden>
-    Форма успешно отправлена!
+    Заявка отправлена! Мы свяжемся с вами в течение рабочего дня.
   </p>
+
+  <a class="scroll-top" href="#top" aria-label="Наверх">↑</a>
 </body>
 </html>
