@@ -62,6 +62,7 @@ body {
   line-height: 1.6;
   color: var(--color-text);
   background-color: var(--color-bg);
+  padding-bottom: 88px;
 }
 
 /* Картинки никогда не шире своего контейнера */
@@ -219,11 +220,28 @@ a:focus-visible {
    7. Блок hero
    =============================== */
 .hero {
+  position: relative;
   max-width: var(--container-width);
   margin: 0 auto var(--space-xl);
   padding: var(--space-xl) var(--space-lg);
-  background-color: var(--color-surface-accent);
+  background-image:
+    linear-gradient(rgba(0, 40, 85, 0.72), rgba(0, 40, 85, 0.72)),
+    url("../images/hero-bg.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   border-radius: var(--radius-lg);
+  color: var(--color-white);
+}
+
+.hero__button {
+  color: var(--color-primary);
+  background-color: var(--color-white);
+}
+
+.hero__button:hover {
+  color: var(--color-primary-dark);
+  background-color: var(--color-surface-accent);
 }
 
 .hero__title {
@@ -272,7 +290,7 @@ a:focus-visible {
    =============================== */
 .products-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: var(--space-lg);
 }
 
@@ -698,11 +716,20 @@ a:focus-visible {
    21. Блок site-footer
    =============================== */
 .site-footer {
-  padding: var(--space-lg);
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 15;
+  padding: var(--space-sm) var(--space-lg);
   font-size: var(--text-sm);
   color: var(--color-muted);
   background-color: var(--color-surface);
   border-top: 1px solid var(--color-border);
+}
+
+.site-footer p {
+  margin: 2px 0;
 }
 
 /* ===============================
@@ -711,7 +738,7 @@ a:focus-visible {
 .scroll-top {
   position: fixed;
   right: var(--space-lg);
-  bottom: var(--space-lg);
+  bottom: 100px;
   z-index: 20;
   width: 48px;
   height: 48px;
